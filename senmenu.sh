@@ -4,7 +4,7 @@ clear
 echo -e "${GREEN}Mendowoad Asset Penting${NC}"
 wget -q -O /root/status "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/statushariini"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu.sh"
-wget -q -O /usr/bin/menu1 "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu1.sh"
+#wget -q -O /usr/bin/menu1 "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu1.sh"
 #wget -q -O /usr/bin/delv2ray "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/delv2ray.sh"
 #wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/add-ws.sh"
 #wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/add-ssws.sh"
@@ -33,7 +33,7 @@ wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Amoebacoy/cv/
 wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-bckp-github.sh"
 #wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/bckpbot.sh"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/usernew.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu.sh"
+#wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu.sh"
 wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/webmin.sh"
 wget -q -O /usr/bin/changer "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/changer.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/xp.sh"
@@ -117,7 +117,7 @@ chmod +x /usr/bin/menu-trojan
 chmod +x /usr/bin/menu-ssh
 chmod +x /usr/bin/menu-bckp
 chmod +x /usr/bin/menu
-chmod +x /usr/bin/menu1
+#chmod +x /usr/bin/menu1
 chmod +x /usr/bin/menu-backup
 chmod +x /usr/bin/wbm
 chmod +x /usr/bin/xp
