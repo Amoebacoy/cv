@@ -5,14 +5,14 @@
 sudo apt install squid -y
 mkdir /var/lib/ssnvpn-pro/
 rm -f /usr/bin/menu-ssh
-wget -q -O /var/lib/ssnvpn-pro/ipvps.conf "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipvps.conf"
-wger -q -O /usr/bin/tendang "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/limit/tendang.sh"
-wget -q -O /usr/bin/autokill "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/limit/autokill.sh"
-wget -q -O /usr/bin/menu-ssh "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/menu-ssh.sh"
-wget -q -O /usr/bin/restart "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/menu/restart.sh"
+wget -q -O /var/lib/ssnvpn-pro/ipvps.conf "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/ipvps.conf"
+wger -q -O /usr/bin/tendang "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/tendang.sh"
+wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/autokill.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/menu-ssh.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/restart.sh"
 chmod +x /usr/bin/restart
-wget -q -O /usr/bin/bot "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Finaleuy/bot.sh"
-wget -q -O /root/chat "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Finaleuy/chatid.sh"
+wget -q -O /usr/bin/bot "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/bot.sh"
+wget -q -O /root/chat "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/chatid.sh"
 chmod 777 /root/chat
 chmod 777 /usr/bin/bot
 
@@ -65,10 +65,10 @@ service cron restart
 #konfigurasi slowdns
 rm -rf /etc/slowdns
 mkdir -m 777 /etc/slowdns
-wget -q -O /etc/slowdns/server.key "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/SLDNS/server.key"
-wget -q -O /etc/slowdns/server.pub "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/SLDNS/server.pub"
-wget -q -O /etc/slowdns/sldns-server "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/SLDNS/sldns-server"
-wget -q -O /etc/slowdns/sldns-client "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/SLDNS/sldns-client"
+wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/server.key"
+wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/SLDNS/server.pub"
+wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/sldns-server"
+wget -q -O /etc/slowdns/sldns-client "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/sldns-client"
 cd
 chmod +x /etc/slowdns/server.key
 chmod +x /etc/slowdns/server.pub
@@ -76,8 +76,8 @@ chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
 
 cd
-#wget -q -O /etc/systemd/system/client-sldns.service "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/SLDNS/client-sldns.service"
-#wget -q -O /etc/systemd/system/server-sldns.service "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/SLDNS/server-sldns.service"
+#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/SLDNS/client-sldns.service"
+#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/SLDNS/server-sldns.service"
 
 cd
 #install client-sldns.service
