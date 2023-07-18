@@ -22,8 +22,8 @@ echo -e "${GREEN}proses instalasi sedang berjalan..!!"
 sleep 1
 clear
 echo -e "${GREEN} MENDOWNLOAD ASET..!!!"
-wget -q -O /usr/bin/addudp "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Ssh%20udp%20menu/addssh.sh"
-wget -q -O /usr/bin/udp "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Ssh%20udp%20menu/menush.sh"
+wget -q -O /usr/bin/addudp "https://raw.githubusercontent.com/Amoebacoy/cv/main/udp/addssh.sh"
+wget -q -O /usr/bin/udp "https://raw.githubusercontent.com/Amoebacoy/cv/main/udp/menush.sh"
 chmod 777 /usr/bin/addudp
 chmod 777 /usr/bin/udp
 clear
