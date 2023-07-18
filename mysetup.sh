@@ -108,14 +108,14 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install IPSEC L2TP & SSTP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1
-wget http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/ipsec.sh
+wget https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec.sh
 bash ipsec.sh
 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install OPENVPN             $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
-wget raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/Amoebacoy/cv/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # pemberitahuan
 
