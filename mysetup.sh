@@ -249,6 +249,7 @@ rm -fr /root/slowdns.sh
 rm -fr /root/updatsc.sh
 rm -fr /root/kanyut.sh
 rm -fr /root/wslow.sh
+rm -fr /root/install-udp.sh
 history -c
 sleep 1
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
