@@ -37,8 +37,8 @@ export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
 export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
-export Server_URL="http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/"
-export Server1_URL="http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/"
+#export Server_URL="http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/"
+#export Server1_URL="http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -46,8 +46,8 @@ export Auther=".geovpn"
 
 rm -f /usr/bin/lock
 rm -f /usr/bin/unlock
-wget -q -O /usr/bin/lock "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/limit/user-lock.sh" && chmod +x /usr/bin/lock
-wget -q -O /usr/bin/unlock "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/limit/user-unlock.sh" && chmod +x /usr/bin/unlock
+wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/user-lock.sh" && chmod +x /usr/bin/lock
+wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/user-unlock.sh" && chmod +x /usr/bin/unlock
 if [ "${EUID}" -ne 0 ]; then
 echo -e "${EROR} Please Run This Script As Root User !"
 exit 1
