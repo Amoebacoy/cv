@@ -4,7 +4,7 @@
 apt update && apt upgrade -y
 apt install python3 python3-pip -y
 apt install sqlite -y
-wget http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/cybervpn.zip
+wget https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/cybervpn.zip
 unzip cybervpn.zip
 cd cybervpn
 pip3 install -r requirements.txt
@@ -52,24 +52,24 @@ systemctl enable cybervpn
 clear
 echo "downloading asset"
 
-wget -q -O /usr/bin/panelbot "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/panelbot.sh" && chmod +x /usr/bin/panelbot
+wget -q -O /usr/bin/panelbot "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/panelbot.sh" && chmod +x /usr/bin/panelbot
 
 
-wget -q -O /usr/bin/delvl "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/delvl.sh" && chmod +x /usr/bin/delvl
+wget -q -O /usr/bin/delvl "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/delvl.sh" && chmod +x /usr/bin/delvl
 
-wget -q -O /usr/bin/advl "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/advl.sh" && chmod +x /usr/bin/advl
-
-
-wget -q -O /usr/bin/delvm "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/delvm.sh" && chmod +x /usr/bin/delvm
+wget -q -O /usr/bin/advl "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/advl.sh" && chmod +x /usr/bin/advl
 
 
-wget -q -O /usr/bin/advm "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/advm.sh" && chmod +x /usr/bin/advm
+wget -q -O /usr/bin/delvm "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/delvm.sh" && chmod +x /usr/bin/delvm
 
-wget -q -O /usr/bin/deltr "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/deltr.sh" && chmod +x /usr/bin/deltr
 
-wget -q -O /usr/bin/adtr "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/botssh/adtr.sh" && chmod +x /usr/bin/adtr
+wget -q -O /usr/bin/advm "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/advm.sh" && chmod +x /usr/bin/advm
 
-wget -q -O /usr/bin/menu "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/deltr "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/deltr.sh" && chmod +x /usr/bin/deltr
+
+wget -q -O /usr/bin/adtr "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/adtr.sh" && chmod +x /usr/bin/adtr
+
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/menu.sh" && chmod +x /usr/bin/menu
 
 
 echo " Installations complete, type /start or /menu on your bot https://t.me/Cyber301_bot"
