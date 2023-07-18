@@ -60,7 +60,6 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-wget -q -O berhasil.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/berhasil.sh && chmod +x berhasil.sh && ./berhasil.sh
 
 
 #exp
@@ -95,6 +94,9 @@ sleep 2
 wget -q -O https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 
 wget -q -O bot.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/bot.sh && chmod +x bot.sh && ./bot.sh
+
+wget -q -O berhasil.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/berhasil.sh && chmod +x berhasil.sh && ./berhasil.sh
+
 
 #cronjob
 #echo "30 * * * * root removelog" >> /etc/crontab
