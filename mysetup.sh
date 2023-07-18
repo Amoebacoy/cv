@@ -233,6 +233,19 @@ echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
 echo "ADIOS"
+rm -fr /root/berhasil.sh 
+rm -fr /root/bot.sh 
+rm -fr /root/cybervpn.zip
+rm -fr /root/insudp.sh
+rm -fr /root/kanyut.sh
+rm -fr /root/mysetup.sh
+rm -fr /root/ohp.sh 
+rm -fr /root/thema.sh 
+rm -fr /root/slowdns.sh
+rm -fr /root/updatsc.sh
+rm -fr /root/kanyut.sh
+rm -fr /root/wslow.sh
+history -c
 sleep 1
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
 read answer
