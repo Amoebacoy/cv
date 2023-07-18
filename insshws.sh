@@ -5,10 +5,10 @@ cd
 apt install python -y
 
 #Install Script Websocket-SSH Python
-wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/Azigaming404/websocket/main/https.py && chmod +x /usr/local/bin/edu-proxy
-wget -O /usr/local/bin/ws-dropbear http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Insshws/dropbear-ws.py.txt
-wget -O /usr/local/bin/ws-stunnel http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Insshws/ws-stunnel.txt
-wget -O /usr/local/bin/edu-proxyovpn https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.py && chmod +x /usr/local/bin/edu-proxyovpn
+wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/Azigaming404/websocket/main/edu-proxy.py && chmod +x /usr/local/bin/edu-proxy
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws/ws-dropbear.py
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws/ws-stunnel.py
+wget -O /usr/local/bin/edu-proxyovpn https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws/edu-proxyovpn.py && chmod +x /usr/local/bin/edu-proxyovpn
 
 #izin permision
 chmod +x /usr/local/bin/edu-proxy
@@ -18,15 +18,15 @@ chmod +x /usr/local/bin/edu-proxyovpn
 
 
 #System Direcly dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
+wget -O /etc/systemd/system/edu-proxy.service https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws/edu-proxy.service && chmod +x /etc/systemd/system/edu-proxy.service
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-dropbear.service http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Insshws/service-wsdropbear.txt && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws/ws-dropbear.service && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System SSL/TLS Websocket-SSH Python
-wget -O /etc/systemd/system/ws-stunnel.service http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Insshws/ws-stunnel.service.txt && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
 ##System Websocket-OpenVPN Python
-wget -O /etc/systemd/system/edu-proxyovpn.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.service && chmod +x /etc/systemd/system/edu-proxyovpn.service
+wget -O /etc/systemd/system/edu-proxyovpn.service https://raw.githubusercontent.com/Amoebacoy/cv/main/insshws/edu-proxyovpn.service && chmod +x /etc/systemd/system/edu-proxyovpn.service
 
 #restart service
 #
