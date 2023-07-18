@@ -15,20 +15,7 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl ipinfo.io/ip | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Fuck You!!"
-exit 0
-fi
 # ==================================================
-# Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsec"
 
 VPN_IPSEC_PSK='azi'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
@@ -303,14 +290,14 @@ service fail2ban restart 2>/dev/null
 service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
 mkdir /var/lib/crot
-wget -O /usr/bin/addl2tp http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/addl2tp.sh && chmod +x /usr/bin/addl2tp
-wget -O /usr/bin/dell2tp http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/dell2tp.sh && chmod +x /usr/bin/dell2tp
-wget -O /usr/bin/addpptp http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/addpptp.sh && chmod +x /usr/bin/addpptp
-wget -O /usr/bin/delpptp http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/delpptp.sh && chmod +x /usr/bin/delpptp
-wget -O /usr/bin/renewpptp http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/renewpptp.sh && chmod +x /usr/bin/renewpptp
-wget -O /usr/bin/renewl2tp http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
-wget -O /var/lib/crot/data-user-l2tp "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/l2tp-user.sh"
-wget -O /var/lib/crot/data-user-pptp "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/ipsec/pptp-user"
+wget -O /usr/bin/addl2tp https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/addl2tp.sh && chmod +x /usr/bin/addl2tp
+wget -O /usr/bin/dell2tp https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/dell2tp.sh && chmod +x /usr/bin/dell2tp
+wget -O /usr/bin/addpptp https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/addpptp.sh && chmod +x /usr/bin/addpptp
+wget -O /usr/bin/delpptp https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/delpptp.sh && chmod +x /usr/bin/delpptp
+wget -O /usr/bin/renewpptp https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/renewpptp.sh && chmod +x /usr/bin/renewpptp
+wget -O /usr/bin/renewl2tp https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
+wget -O /var/lib/crot/data-user-l2tp "https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/l2tp-user.sh"
+wget -O /var/lib/crot/data-user-pptp "https://raw.githubusercontent.com/Amoebacoy/cv/main/ipsec/pptp-user"
 chmod +x /var/lib/crot/data-user-l2tp
 chmod +x /var/lib/crot/data-user-pptp
 touch /var/lib/crot/data-user-l2tp
