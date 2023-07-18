@@ -49,7 +49,7 @@ wget -q -O /usr/bin/fix "https://raw.githubusercontent.com/Amoebacoy/cv/main/sen
 wget -q -O /usr/bin/setting "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/setting.sh"
 wget -q -O /usr/bin/menu-ipsec "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-ipsec.sh"
 wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/wslow.sh
-wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/backup/set-br.sh
+wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/set-br.sh
 bash set-br.sh
 wget https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/thema.sh
 wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/trial.sh"
