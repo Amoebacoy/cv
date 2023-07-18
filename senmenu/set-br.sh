@@ -21,10 +21,10 @@ read -rp "input your chat id Telegram:" nenen
 echo "$nenen" >> /root/id
 
 cd /usr/bin
-wget -O mautobackup "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/backup/autobackup.sh"
-wget -O mbackup "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/backup/backup.sh"
-wget -O mrestore "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/backup/restore.sh"
-wget -O mlimitspeed "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/backup/limitspeed.sh"
+wget -O mautobackup "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/autobackup.sh"
+wget -O mbackup "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/backup.sh"
+wget -O mrestore "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/restore.sh"
+wget -O mlimitspeed "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/limitspeed.sh"
 chmod +x mautobackup
 chmod +x mbackup
 chmod +x mrestore
