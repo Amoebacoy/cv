@@ -20,7 +20,7 @@ commonname=none
 email=vpsnyber673@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/Insshws/password.txt"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Amoebacoy/cv/main/ssh-vpn/password.txt"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -129,7 +129,7 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "http://sgpx.cybervpn.site:81/Autoscript-by-azi-main/configuration/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Amoebacoy/cv/main/ssh-vpn/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
@@ -257,7 +257,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Amoebacoy/cv/main/ssh-vpn/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
