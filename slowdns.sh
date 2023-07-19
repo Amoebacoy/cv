@@ -76,8 +76,8 @@ chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
 
 cd
-#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/SLDNS/client-sldns.service"
-#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/SLDNS/server-sldns.service"
+#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/client-sldns.service"
+#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/server-sldns.service"
 
 cd
 #install client-sldns.service
