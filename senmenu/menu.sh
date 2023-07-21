@@ -87,7 +87,7 @@ ressh="${GREEN}ON${NC}"
 else
 ressh="${red}OFF${NC}"
 fi
-sshstunel=$(service stunnel5 status | grep active | cut -d ' ' $stat)
+sshstunel=$(service stunnel4 status | grep active | cut -d ' ' $stat)
 if [ "$sshstunel" = "active" ]; then
 resst="${GREEN}ON${NC}"
 else
@@ -123,19 +123,19 @@ IPVPS=$(curl -s ipinfo.io/ip )
 export sem=$( curl -s https://raw.githubusercontent.com/Amoebacoy/cv/main/version)
 clear
 echo -e "\033[0;34m ${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m         °SCRIPT PREMIUM BY Aby&Fabumi°          \E[0m"
+echo -e "      \E[44;1;39m              °SCRIPT PREMIUM BY Aby&Fabumi°              \E[0m"
 echo -e "\033[0;34m ${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\033[0;34m □ Server Uptime       :  $( uptime -p  | cut -d " " -f 2-10000 ) " 
 echo -e "\033[0;34m • Current Time        :  $( date -d "0 days" +"%d-%m-%Y | %X" )"
-echo -e "\033[0;34m □ Current Domain      :  ${BIPurple}( cat /etc/xray/domain )${NC}"
+echo -e "\033[0;34m □ Current Domain      :  ${BIPurple}(cat /etc/xray/domain)${NC}"
 echo -e "\033[0;34m • Server IP           :  ${BIYellow}$IPVPS${NC}"
 echo -e "\033[0;34m □ ISP                 :  $(cat /root/.isp)${NC}"
 echo -e "\033[0;34m • Version             :  ${BIYellow}$sem${NC}"
 echo -e "\033[0;34m □ Status Hari ini     :  ${BIPurple}(cat /root/status)${NC}"
 echo -e "\033[0;34m ${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\033[0;34m ${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "\033[0;34m│ $NC${GREEN} SSH ${NC}: $ressh"" ${BIWhite} NGINX ${NC}: $resngx"" ${BIWhite}  XRAY ${NC}: $resv2r"" ${BIWhite} TROJAN ${NC}: $resv2r\E[0m\033[0;34m      │"
-echo -e "\033[0;34m│ $NC${GREEN}          DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws \E[0m\033[0;34m               │"
+echo -e "\033[0;34m ${GREEN}│ $NC${BIWhite} SSH ${NC}: $ressh"" ${BIWhite} NGINX ${NC}: $resngx"" ${BIWhite}  XRAY ${NC}: $resv2r"" ${BIWhite} TROJAN ${NC}: $resv2r\E[0m\033[0;34m      │"
+echo -e "\033[0;34m ${GREEN}│ $NC${BIWhite}          DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws \E[0m\033[0;34m               │"
 echo -e "\033[0;34m ${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "\033[0;34m ${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "\033[0;34m ${GREEN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1"
@@ -144,11 +144,11 @@ echo -e "\033[0;34m ${GREEN}└────────────────�
 echo -e "\033[0;34m ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "\E[39;1;92m                ⇱ MENU SERVICE ⇲                \E[0m"
 echo -e "\033[0;34m ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "\033[0;34m  ${CYAN}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH & OVPN MENU $NC  ${CYAN}[${BIWhite}06${BICyan}]${RED} • ${NC}${CYAN}MENU L2TP & PPTP [ IPSEC ]$NC"
-echo -e "\033[0;34m  ${CYAN}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${CYAN}[${BIWhite}07${BICyan}]${RED} • ${NC}${CYAN}INFO RUNNING $NC"
-echo -e "\033[0;34m  ${CYAN}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${CYAN}[${BIWhite}08${BICyan}]${RED} • ${NC}${CYAN}SSH UDP $NC"
-echo -e "\033[0;34m  ${CYAN}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${CYAN}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}SETTING $NC"
-echo -e "\033[0;34m  ${CYAN}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${CYAN}[${BIWhite}10${BICyan}]${RED} • ${NC}${CYAN}TRIAL GENERATOR $NC" 
+echo -e "\033[0;34m  ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH & OVPN MENU $NC  ${BICyan}[${BIWhite}06${BICyan}]${RED} • ${NC}${CYAN}MENU L2TP & PPTP [ IPSEC ]$NC"
+echo -e "\033[0;34m  ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}07${BICyan}]${RED} • ${NC}${CYAN}INFO RUNNING $NC"
+echo -e "\033[0;34m  ${BICyan}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $NC  ${BICyan}[${BIWhite}08${BICyan}]${RED} • ${NC}${CYAN}SSH UDP $NC"
+echo -e "\033[0;34m  ${BICyan}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${BICyan}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}SETTING $NC"
+echo -e "\033[0;34m  ${BICyan}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${BICyan}[${BIWhite}10${BICyan}]${RED} • ${NC}${CYAN}TRIAL GENERATOR $NC" 
 echo -e "\033[0;34m ${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "\033[0;34m ${GREEN}│ ${BOLD}${LIGHT}Expired   = Lifetime                            ${NC}"
 echo -e "\033[0;34m ${GREEN}│ ${BOLD}${LIGHT}Developer = Aby&Fabumi                         ${NC}"
