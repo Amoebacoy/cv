@@ -35,7 +35,7 @@ rm nsdomain
 
 clear
 figlet "slowdns" | lolcat
-read -rp "Masukkan Nameserver: " -e sub
+read -rp "Masukkan Domain NS: " -e sub
 SUB_DOMAIN=${sub}
 NS_DOMAIN=${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain
