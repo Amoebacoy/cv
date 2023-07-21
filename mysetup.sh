@@ -106,21 +106,7 @@ read -rp "Input ur domain : " -e pp
     fi
 
 clear
-#delete directory
-rm -rf /root/nsdomain
-rm nsdomain
 
-#input nameserver manual to cloudflare
-
-clear
-read -rp "Masukkan Nameserver: " -e sub
-if [ -z $sub ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
- 	echo $sub > /root/nsdomain
-  clear
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
@@ -169,7 +155,7 @@ echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 
-wget -q -O slowdns.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget -q -O slowdns.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 sleep 1
 wget -q -O bot.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/bot.sh && chmod +x bot.sh && ./bot.sh
 sleep 1
