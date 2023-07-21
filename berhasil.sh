@@ -31,7 +31,7 @@ clear
 echo -e "${GREEN} MENDOWNLOAD CONFIG UDP"
 sleep 1
 
-wget -q -O https://raw.githubusercontent.com/Amoebacoy/cv/main/udp/install-udp.sh && chmod +x install-udp && ./install-udp 
+wget -q -O install-udp https://raw.githubusercontent.com/Amoebacoy/cv/main/udp/install-udp.sh && chmod +x install-udp && ./install-udp 
 
 
 
