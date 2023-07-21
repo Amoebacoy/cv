@@ -225,7 +225,7 @@ fi
 #install remove log
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "* * * * * root clog" >> /etc/crontab
-echo "59 * * * * root pkill 'menufinal'" >> /etc/crontab
+echo "59 * * * * root pkill 'menu'" >> /etc/crontab
 echo "0 1 * * * root xp" >> /etc/crontab
 echo "*/5 * * * * root notramcpu" >> /etc/crontab
 service cron restart
@@ -241,7 +241,7 @@ fi
 fi
 mesg n || true
 clear
-menufinal
+menu
 END
 chmod 644 /root/.profile
 if [ -f "/root/log-install.txt" ]; then
