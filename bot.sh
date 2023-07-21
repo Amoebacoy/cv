@@ -69,7 +69,7 @@ wget -q -O /usr/bin/deltr "https://raw.githubusercontent.com/Amoebacoy/cv/main/b
 
 wget -q -O /usr/bin/adtr "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/adtr.sh" && chmod +x /usr/bin/adtr
 
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu.sh" && chmod +x /usr/bin/menu
 
 
 echo " Installations complete, type /start or /menu on your bot https://t.me/Cyber301_bot"
