@@ -122,13 +122,14 @@ echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━
 
 
 echo -e ""
-echo -e "$GREEN┌────────────────────────────────────────────────────┐${NC}"
+echo -e "${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "\033[0;34m│ $NC${BIWhite} SSH ${NC}: $ressh"" ${BIWhite} NGINX ${NC}: $resngx"" ${BIWhite}  XRAY ${NC}: $resv2r"" ${BIWhite} TROJAN ${NC}: $resv2r\E[0m\033[0;34m      │"
 echo -e "\033[0;34m│ $NC${BIWhite}          DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws \E[0m\033[0;34m               │"
-echo -e "${GREEN}┌──────────────────────────────────────────────────┐${NC}"
+echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
+echo -e "${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${GREEN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1"
 echo -e "${GREEN}│  \033[0m ${Blue} $ssh1        $vma           $vla          $tra               $ssa   $NC"
-echo -e "${GREEN}└──────────────────────────────────────────────────┘${NC}"
+echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "\E[39;1;92m                ⇱ MENU SERVICE ⇲                \E[0m"
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
@@ -140,12 +141,12 @@ echo -e " ${CYAN}[${BIWhite}03${BICyan}]${RED} •${NC} ${CYAN}VLESS MENU      $
 echo -e " ${CYAN}[${BIWhite}04${BICyan}]${RED} •${NC} ${CYAN}TROJAN MENU     $NC  ${CYAN}[${BIWhite}09${BICyan}]${RED} • ${NC}${CYAN}SETTING $NC"
 echo -e " ${CYAN}[${BIWhite}05${BICyan}]${RED} •${NC} ${CYAN}S-SOCK MENU     $NC  ${CYAN}[${BIWhite}10${BICyan}]${RED} • ${NC}${CYAN}TRIAL GENERATOR $NC" 
 echo -e " ${GREEN}"
-echo -e "${GREEN}┌──────────────────────────────────────────────────┐${NC}"
+echo -e "${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${GREEN}│ ${BOLD}${LIGHT}Client  = $Name                           ${NC}"
 echo -e "${GREEN}│ ${BOLD}${LIGHT}Expired = Lifetime                            ${NC}"
 echo -e "${GREEN}│ ${BOLD}${LIGHT}Developer = Aby&Fabumi                         ${NC}"
 
-echo -e "${GREEN}└──────────────────────────────────────────────────┘${NC}"
+echo -e "${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 
 echo
 read -p " Select menu : " opt
