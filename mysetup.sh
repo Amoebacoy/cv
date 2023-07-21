@@ -201,42 +201,6 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 
 wget https://raw.githubusercontent.com/Amoebacoy/cv/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
-# pemberitahuan
-
-USERID=5764457448
-KEY="6226368145:AAGaFLgpYKcH7JppfHptqyWowndyO_IENEU"
-TIMEOUT="10"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
-DATE_EXEC="$(date "+%d %b %Y %H:%M")"
-TMPFILE='/tmp/ipinfo-$DATE_EXEC.txt'
-if [ -n "$SSH_CLIENT" ] && [ -z "$TMUX" ]; then
-	IP=$(echo $SSH_CLIENT | awk '{print $1}')
-	PORT=$(echo $SSH_CLIENT | awk '{print $3}')
-	HOSTNAME=$(hostname -f)
-	IPADDR=$(hostname -I | awk '{print $1}')
-	curl http://ipinfo.io/$IP -s -o $TMPFILE
-        CITY=$(cat $TMPFILE | sed -n 's/^  "city":[[:space:]]*//p' | sed 's/"//g')
-        REGION=$(cat $TMPFILE | sed -n 's/^  "region":[[:space:]]*//p' | sed 's/"//g')
-        COUNTRY=$(cat $TMPFILE | sed -n 's/^  "country":[[:space:]]*//p' | sed 's/"//g')
-        ORG=$(cat $TMPFILE | sed -n 's/^  "org":[[:space:]]*//p' | sed 's/"//g')
-	TEXT="
-==============================
-🔰Informasi instalasi script🔰
-==============================
-🔰Tanggal: $DATE_EXEC
-🔰Domain: $(cat /etc/xray/domain) 
-🔰Status: Telah menginstall scriptmu
-✅Hostname  : $HOSTNAME 
-✅Publik IP :$IPADDR 
-✅IP PROV   : $IP 
-✅ISP       : $ORG
-✅KOTA      : $CITY
-✅PROVINSI  : $REGION
-✅PORT SSH. : $PORT"
-	curl -s --max-time $TIMEOUT -d "chat_id=$USERID&disable_web_page_preview=1&text=$TEXT" $URL > /dev/null
-	rm $TMPFILE
-fi
-
 #install remove log
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "* * * * * root clog" >> /etc/crontab
