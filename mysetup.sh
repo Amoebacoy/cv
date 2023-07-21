@@ -216,7 +216,7 @@ cd
 echo "1.0.0" > versi
 clear
 rm -f ins-xray.sh
-rm -f sen.sh
+rm -f senmenu.sh
 rm -f setupku.sh
 rm -f xraymode.sh
 
