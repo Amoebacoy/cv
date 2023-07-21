@@ -30,7 +30,7 @@ export UNDERLINE="\e[4m"
 clear
 echo -e "${GREEN}Mendowoad Asset Penting${NC}"
 wget -q -O /root/status "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/statushariini"
-wget -q -O /usr/bin/menufinal "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menufinal.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu.sh"
 #wget -q -O /usr/bin/menu1 "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu1.sh"
 wget -q -O /usr/bin/delv2ray "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/delv2ray.sh"
 #wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/add-ws.sh"
@@ -113,7 +113,7 @@ curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.
 sudo apt-get install speedtest
 
 
-chmod +x /usr/bin/menufinal
+chmod +x /usr/bin/menu
 #chmod +x /usr/bin/add-ws
 #chmod +x /usr/bin/add-ssws
 #chmod +x /usr/bin/add-socks
@@ -143,7 +143,7 @@ chmod +x /usr/bin/menu-trojan
 #chmod +x /usr/bin/menu-trgo
 chmod +x /usr/bin/menu-ssh
 chmod +x /usr/bin/menu-bckp
-chmod +x /usr/bin/menufinal
+chmod +x /usr/bin/menu
 #chmod +x /usr/bin/menu1
 chmod +x /usr/bin/menu-backup
 chmod +x /usr/bin/wbm
