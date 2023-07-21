@@ -106,6 +106,25 @@ read -rp "Input ur domain : " -e pp
     fi
 
 clear
+#delete directory
+rm -rf /root/nsdomain
+rm nsdomain
+
+#input nameserver manual to cloudflare
+
+clear
+figlet "NsDomain" | lolcat
+read -rp "Masukkan Nameserver: " -e sub
+if [ -z $sub ]; then
+        echo -e "
+        Nothing input for domain!
+        Then a random domain will be created"
+    else
+	SUB_DOMAIN=${sub}
+	NS_DOMAIN=${SUB_DOMAIN}
+	echo $NS_DOMAIN > /root/nsdomain
+ 	echo $sub > /root/nsdomain
+  clear
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
