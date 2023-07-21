@@ -102,7 +102,7 @@ case $bro in
 13) clear ; restart ;;
 14) clear ; wbm ;;
 15) clear ; netstat -tnlp ;;
-16) clear ; bash /root/chat ;;
+16) clear ; panelbot ;;
 17) clear ; menu-backup ;;
 18) clear ; pelanggar ;;
 19) clear ; infosc ;; 
