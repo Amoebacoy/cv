@@ -173,7 +173,7 @@ echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 
-wget -q -O https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget -q -O slowdns.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 sleep 1
 wget -q -O bot.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/bot.sh && chmod +x bot.sh && ./bot.sh
 sleep 1
