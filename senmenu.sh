@@ -27,8 +27,6 @@ export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
 export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
-mkdir /user/curent > /dev/null 2>&1
-touch /user/current
 clear
 echo -e "${GREEN}Mendowoad Asset Penting${NC}"
 wget -q -O /root/status "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/statushariini"
