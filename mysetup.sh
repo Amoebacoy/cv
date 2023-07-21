@@ -295,7 +295,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Credit By AZI 😀 ]-==============="
+echo "===============-[ Script Credit By Aby&Fabumi 😀 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
