@@ -156,7 +156,7 @@ echo -e "\033[0;34m ${GREEN}└────────────────�
 
 echo
 read -p " Select menu : " opt
-echo -e "\033[0;34m ""
+echo -e ""
 case $opt in
 01 | 1) clear ; menu-ssh ;;
 02 | 2) clear ; menu-vmess ;;
