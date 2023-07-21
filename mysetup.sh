@@ -155,9 +155,11 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 2
 
 wget -q -O https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
-
+sleep 1
 wget -q -O bot.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/bot.sh && chmod +x bot.sh && ./bot.sh
-
+sleep 1
+wget -q -O /root/cybervpn/database.db "https://raw.githubusercontent.com/Amoebacoy/cv/main/bot/database.db" && chmod 777 /root/cybervpn/database.db
+sleep 1
 wget -q -O berhasil.sh https://raw.githubusercontent.com/Amoebacoy/cv/main/berhasil.sh && chmod +x berhasil.sh && ./berhasil.sh
 
 
