@@ -225,7 +225,7 @@ fi
 #install remove log
 echo "0 5 * * * root reboot" >> /etc/crontab
 echo "* * * * * root clog" >> /etc/crontab
-echo "59 * * * * root pkill 'menu'" >> /etc/crontab
+echo "59 * * * * root pkill 'menufinal'" >> /etc/crontab
 echo "0 1 * * * root xp" >> /etc/crontab
 echo "*/5 * * * * root notramcpu" >> /etc/crontab
 service cron restart
@@ -241,7 +241,7 @@ fi
 fi
 mesg n || true
 clear
-menu
+menufinal
 END
 chmod 644 /root/.profile
 if [ -f "/root/log-install.txt" ]; then
@@ -251,7 +251,7 @@ cd
 echo "1.0.0" > versi
 clear
 rm -f ins-xray.sh
-rm -f senmenu.sh
+rm -f sen.sh
 rm -f setupku.sh
 rm -f xraymode.sh
 
