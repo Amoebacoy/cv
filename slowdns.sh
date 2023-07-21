@@ -2,17 +2,20 @@
 # Script  By CyberVPN
 # 2023 SLOWDNS
 # ===============================================
+figlet "slowdns" | lolcat
+clear
 sudo apt install squid -y
 mkdir /var/lib/ssnvpn-pro/
 rm -f /usr/bin/menu-ssh
-wget -q -O /var/lib/ssnvpn-pro/ipvps.conf "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/ipvps.conf"
-wger -q -O /usr/bin/tendang "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/tendang.sh"
-wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/autokill.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/menu-ssh.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/restart.sh"
+
+wget -O /var/lib/ssnvpn-pro/ipvps.conf https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/ipvps.conf && chmod +x /var/lib/ssnvpn-pro/ipvps.conf
+wger -O /usr/bin/tendang https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/tendang.sh
+wget -O /usr/bin/autokill https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/autokill.sh
+wget -O /usr/bin/menu-ssh https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/menu-ssh.sh
+wget -O /usr/bin/restart https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/restart.sh
 chmod +x /usr/bin/restart
-wget -q -O /usr/bin/bot "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/bot.sh"
-wget -q -O /root/chat "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/chatid.sh"
+wget -q -O /usr/bin/bot https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/bot.sh
+wget -q -O /root/chat https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/chatid.sh
 chmod 777 /root/chat
 chmod 777 /usr/bin/bot
 
@@ -24,21 +27,6 @@ iptables -I INPUT -p udp --dport 5300 -j ACCEPT
 iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
 netfilter-persistent save
 netfilter-persistent reload
-
-
-
-#delete directory
-rm -rf /root/nsdomain
-rm nsdomain
-
-#input nameserver manual to cloudflare
-
-clear
-figlet "slowdns" | lolcat
-read -rp "Masukkan Nameserver: " -e sub
-SUB_DOMAIN=${sub}
-NS_DOMAIN=${SUB_DOMAIN}
-echo $NS_DOMAIN > /root/nsdomain
 
 nameserver=$(cat /root/nsdomain)
 apt update -y
@@ -65,10 +53,10 @@ service cron restart
 #konfigurasi slowdns
 rm -rf /etc/slowdns
 mkdir -m 777 /etc/slowdns
-wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/server.key"
-wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/server.pub"
-wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/sldns-server"
-wget -q -O /etc/slowdns/sldns-client "https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/sldns-client"
+wget -q -O /etc/slowdns/server.key https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/server.key
+wget -q -O /etc/slowdns/server.pub https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/server.pub
+wget -q -O /etc/slowdns/sldns-server https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/sldns-server
+wget -q -O /etc/slowdns/sldns-client https://raw.githubusercontent.com/Amoebacoy/cv/main/slowdns/sldns-client
 cd
 chmod +x /etc/slowdns/server.key
 chmod +x /etc/slowdns/server.pub
