@@ -34,7 +34,7 @@ echo -e "${GREEN}Mendowoad Asset Penting${NC}"
 wget -q -O /root/status "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/statushariini"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu.sh"
 #wget -q -O /usr/bin/menu1 "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu1.sh"
-#wget -q -O /usr/bin/delv2ray "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/delv2ray.sh"
+wget -q -O /usr/bin/delv2ray "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/delv2ray.sh"
 #wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/add-ws.sh"
 #wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/add-ssws.sh"
 #wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/add-socks.sh"
@@ -137,7 +137,7 @@ chmod +x /usr/bin/cek-ram
 chmod +x /usr/bin/limit-speed
 chmod +x /usr/bin/menu-vless
 chmod +x /usr/bin/menu-vmess
-chmod +x /usr/bin/delvray
+chmod +x /usr/bin/delv2ray
 chmod +x /usr/bin/menu-ss
 chmod +x /usr/bin/updatsc
 #chmod +x /usr/bin/menu-socks
