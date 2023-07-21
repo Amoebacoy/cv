@@ -1,5 +1,66 @@
 #!/bin/bash
-
+clear
+#Minacantik
+export LANG='en_US.UTF-8'
+export LANGUAGE='en_US.UTF-8'
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export LIGHT='\033[0;37m'
+export NC='\033[0m'
+BIRed='\033[1;91m'
+red='\e[1;31m'
+bo='\e[1m'
+red='\e[1;31m'
+green='\e[0;32m'
+yell='\e[1;33m'
+tyblue='\e[1;36m'
+purple() { echo -e "\\033[35;1m${*}\\033[0m"; }
+tyblue() { echo -e "\\033[36;1m${*}\\033[0m"; }
+yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
+green() { echo -e "\\033[32;1m${*}\\033[0m"; }
+red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+export EROR="[${RED} ERROR ${NC}]"
+export INFO="[${YELLOW} INFO ${NC}]"
+export OKEY="[${GREEN} OKEY ${NC}]"
+export PENDING="[${YELLOW} PENDING ${NC}]"
+export SEND="[${YELLOW} SEND ${NC}]"
+export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
+export BOLD="\e[1m"
+export WARNING="${RED}\e[5m"
+export UNDERLINE="\e[4m"
+if [ "${EUID}" -ne 0 ]; then
+echo -e "${EROR} Please Run This Script As Root User !"
+exit 1
+fi
+echo -e "${GREEN}Starting Installation............${NC}"
+cd /root/
+apt update -y
+apt-get --reinstall --fix-missing install -y sudo dpkg psmisc socat jq ruby wondershaper python2 tmux nmap bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget vim net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential gcc g++ automake make autoconf perl m4 dos2unix dropbear libreadline-dev zlib1g-dev libssl-dev dirmngr libxml-parser-perl neofetch git lsof iptables iptables-persistent
+apt-get --reinstall --fix-missing install -y libreadline-dev zlib1g-dev libssl-dev python2 screen curl jq bzip2 gzip coreutils rsyslog iftop htop zip unzip net-tools sed gnupg gnupg1 bc sudo apt-transport-https build-essential dirmngr libxml-parser-perl neofetch screenfetch git lsof openssl easy-rsa fail2ban tmux vnstat dropbear libsqlite3-dev socat cron bash-completion ntpdate xz-utils sudo apt-transport-https gnupg2 gnupg1 dnsutils lsb-release chrony
+gem install lolcat
+sleep 1
+echo -e "[ ${green}INFO$NC ] Disable ipv6"
+echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6 >/dev/null 2>&1
+sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local >/dev/null 2>&1
+apt update -y
+apt upgrade -y
+apt dist-upgrade -y
+clear
+clear && clear && clear
+clear;clear;clear
+localip=$(hostname -I | cut -d\  -f1)
+hst=( `hostname` )
+dart=$(cat /etc/hosts | grep -w `hostname` | awk '{print $2}')
+if [[ "$hst" != "$dart" ]]; then
+echo "$localip $(hostname)" >> /etc/hosts
+fi
+if [ -f "/root/log-install.txt" ]; then
+rm -fr /root/log-install.txt
+fi
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 touch /etc/xray/domain
@@ -20,13 +81,15 @@ mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 
 sudo apt install vnstat
-sudo apt insta squid
+sudo apt install squid
 wget -q -O https://raw.githubusercontent.com/Amoebacoy/cv/main/tools.sh && chmod +x tools.sh && ./tools.sh
 rm tools.sh
 clear
 
 clear
-echo "Add Domain for vmess/vless/trojan dll"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Masukan Domain               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo " "
 read -rp "Input ur domain : " -e pp
     if [ -z $pp ]; then
@@ -198,7 +261,7 @@ echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22, 53, 2222, 2269"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 80" | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
-echo "   - Stunnel5                : 222, 777" | tee -a log-install.txt
+echo "   - Stunnel4                : 222, 777" | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100-7300" | tee -a log-install.txt
 echo "   - Nginx                   : 81" | tee -a log-install.txt
