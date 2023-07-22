@@ -123,7 +123,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 export sem=$( curl -s https://raw.githubusercontent.com/Amoebacoy/cv/main/version)
 clear
 echo -e "\033[0;34m ${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m             °SCRIPT PREMIUM BY Aby&Fabumi°             \E[0m"
+echo -e "  \E[44;1;39m             °SCRIPT PREMIUM BY Aby&Fabumi°           \E[0m"
 echo -e "\033[0;34m ${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\033[0;34m □ Server Uptime       :  $( uptime -p  | cut -d " " -f 2-10000 ) " 
 echo -e "\033[0;34m • Current Time        :  $( date -d "0 days" +"%d-%m-%Y | %X" )"
@@ -142,7 +142,7 @@ echo -e "\033[0;34m ${GREEN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLE
 echo -e "\033[0;34m ${GREEN}│  \033[0m ${Blue} $ssh1        $vma           $vla          $tra               $ssa   $NC"
 echo -e "\033[0;34m ${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "\033[0;34m ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "\E[39;1;92m                ⇱ MENU SERVICE ⇲                \E[0m"
+echo -e "    \E[39;1;92m                ⇱ MENU SERVICE ⇲                \E[0m"
 echo -e "\033[0;34m ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "\033[0;34m  ${BICyan}[${BIWhite}01${BICyan}]${RED} •${NC} ${CYAN}SSH & OVPN MENU $NC  ${BICyan}[${BIWhite}06${BICyan}]${RED} • ${NC}${CYAN}MENU L2TP & PPTP [ IPSEC ]$NC"
 echo -e "\033[0;34m  ${BICyan}[${BIWhite}02${BICyan}]${RED} •${NC} ${CYAN}VMESS MENU      $NC  ${BICyan}[${BIWhite}07${BICyan}]${RED} • ${NC}${CYAN}INFO RUNNING $NC"
