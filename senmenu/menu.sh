@@ -135,7 +135,7 @@ echo -e "\033[0;34m □ Status Hari ini     :  ${BIPurple}$(cat /root/status)${N
 echo -e "\033[0;34m ${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\033[0;34m ${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "\033[0;34m ${GREEN}│ $NC${BIWhite} SSH ${NC}: $ressh"" ${BIWhite} NGINX ${NC}: $resngx"" ${BIWhite}  XRAY ${NC}: $resv2r"" ${BIWhite} TROJAN ${NC}: $resv2r""      ${GREEN}│${NC}"
-echo -e "\033[0;34m ${GREEN}│ $NC${BIWhite}          DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws""          ${GREEN}│${NC}"
+echo -e "\033[0;34m ${GREEN}│ $NC${BIWhite}          DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws""      ${GREEN}│${NC}"
 echo -e "\033[0;34m ${GREEN}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "\033[0;34m ${GREEN}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "\033[0;34m ${GREEN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  $COLOR1"
