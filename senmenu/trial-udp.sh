@@ -37,7 +37,7 @@ cdndomain=$(cat /root/awscdndomain)
 slkey=$(cat /etc/slowdns/server.pub)
 clear
 
-echo "Script AutoCreate Akun SSH dan OpenVPN By CyberVPN"
+echo "Script AutoCreate Akun SSH dan OpenVPN By Aby&Fabumi"
 sleep 3
 echo Ping Host
 echo Cek Hak Akses...
@@ -94,5 +94,5 @@ echo -e "Expired: Jam $expi"
 
 echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${CYAN}     Terimakasih sudah menggunakan" 
-echo -e "${CYAN}        script premium CyberVPN"
+echo -e "${CYAN}        script premium Aby&Fabumi"
 echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
