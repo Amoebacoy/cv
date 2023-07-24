@@ -8,7 +8,7 @@ export LIGHT='\033[0;37m'
 export NC='\033[0m'
 clear
 echo -e "${PURPLE}=================================="
-echo -e "${LIGHT} TRIAL GENERATOR BY CYBERVPN"
+echo -e "${LIGHT} TRIAL GENERATOR BY Aby&Fabumi"
 
 
 echo -e "${PURPLE}=================================="
