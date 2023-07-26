@@ -13,7 +13,9 @@ pip3 install -r requirements.txt
 echo "INSTALL BOT CREATE SSH via TELEGRAM"
 read -e -p "[*] Input Your Id Telegram :" admin
 read -e -p "[*] Input Your Domain vps:" domain
-echo -e BOT_TOKEN='"6148468890:AAFCcJwajKdLDz_Z-IR2czwuoBfIGQ4DExM"' >> /root/cybervpn/var.txt
+read -e -p "[*] Input Your bot API:"  bot
+echo -e BOT_TOKEN='"'$bot'"' >> /root/cybervpn/var.txt
+echo "$bot" >> /root/bot
 echo -e ADMIN='"'$admin'"' >> /root/cybervpn/var.txt
 echo "$admin" >> /root/id
 echo -e DOMAIN='"'$domain'"' >> /root/cybervpn/var.txt
@@ -23,7 +25,7 @@ clear
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
-echo "Api Token     : $bottoken"
+echo "Api Token     : $bot"
 echo "ID            : $admin"
 echo "DOMAIN        : $domain"
 echo "SLOWDNS HOST  : ns.$domain"
