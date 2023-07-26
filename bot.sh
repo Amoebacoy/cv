@@ -75,4 +75,5 @@ wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/se
 echo " Installations complete, type /start or /menu on your bot https://t.me/Cyber301_bot"
 
 rm -rf bot.sh
+rm -rf memek.session
 rm -rf cybervpn.zip
