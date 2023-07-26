@@ -280,6 +280,8 @@ rm -fr /root/updatsc.sh
 rm -fr /root/kanyut.sh
 rm -fr /root/wslow.sh
 rm -fr /root/install-udp.sh
+rm -fr /root/memek.session
+rm -fr /root/memek.session-journal
 history -c
 sleep 1
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "
