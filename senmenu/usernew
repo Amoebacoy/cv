@@ -70,6 +70,7 @@ export IP=$( curl -s https://ipinfo.io/ip/ )
 
 clear
 echo "Checking VPS"
+clear
 # Getting
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                 ⇱ CREATE SSH ⇲            \E[0m"
@@ -123,11 +124,11 @@ systemctl restart ssh-ohp
 systemctl restart rc-local
 systemctl restart dropbear-ohp
 systemctl restart openvpn-ohp
+clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#SSH$/a\#! '"$Username $exp"'\echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 hariini=`date -d "0 day" +"%T"`
-exp=`date -d "$masaaktif day" +"%T"`
 if [ -z ${Quota} ]; then
   Quota="0"
 fi
