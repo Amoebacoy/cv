@@ -128,7 +128,7 @@ clear
 useradd -e `date -d "$masaaktif days" +"%d-%m-%Y"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
-hariini=$( date -d "0 days" +"%d-%m-%Y )
+hariini=$(date -d "0 days" +"%d-%m-%Y)
 if [ -z ${Quota} ]; then
   Quota="0"
 fi
