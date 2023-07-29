@@ -124,8 +124,8 @@ systemctl restart rc-local
 systemctl restart dropbear-ohp
 systemctl restart openvpn-ohp
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
-exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
-echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+sed -i '/#SSH$/a\#! '"$Username $exp"'\echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 hariini=`date -d "0 day" +"%T"`
 exp=`date -d "$masaaktif day" +"%T"`
 if [ -z ${Quota} ]; then
@@ -153,8 +153,8 @@ echo -e "Domain SSH: $domain"
 echo -e "Domain Cloudflare: $domain"
 echo -e "PubKey : $slkey"
 echo -e "Nameserver: $sldomain"
-echo -e "$COLOR1 ${NC} limit quota : $Quota GB"
-echo -e "$COLOR1 ${NC} limit ip    : $limit IP"
+echo -e "limit quota : $Quota GB"
+echo -e "limit ip    : $limit IP"
 echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "OpenSSH: 22"
 echo -e "Dropbear: 44, 69, 143"
