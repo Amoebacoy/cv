@@ -1,0 +1,187 @@
+#!/bin/bash
+# =========================================
+# Quick Setup | Script Setup Manager
+# Edition : Stable Edition V1.0
+# Auther  : Adit Ardiansyah
+# (C) Copyright 2022
+# =========================================
+
+clear
+BIBlack='\033[1;90m'      # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+UWhite='\033[4;37m'       # White
+On_IPurple='\033[0;105m'  #
+On_IRed='\033[0;101m'
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+NC='\e[0m'
+
+# // Export Color & Information
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;33m'
+export BLUE='\033[0;34m'
+export PURPLE='\033[0;35m'
+export CYAN='\033[0;36m'
+export LIGHT='\033[0;37m'
+export NC='\033[0m'
+
+# // Export Banner Status Information
+export EROR="[${RED} EROR ${NC}]"
+export INFO="[${YELLOW} INFO ${NC}]"
+export OKEY="[${GREEN} OKEY ${NC}]"
+export PENDING="[${YELLOW} PENDING ${NC}]"
+export SEND="[${YELLOW} SEND ${NC}]"
+export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
+
+# // Export Align
+export BOLD="\e[1m"
+export WARNING="${RED}\e[5m"
+export UNDERLINE="\e[4m"
+
+# // Exporting URL Host
+export Server_URL="raw.githubusercontent.com/wunuit/test/main"
+export Server1_URL="raw.githubusercontent.com/wunuit/limit/main"
+export Server_Port="443"
+export Server_IP="underfined"
+export Script_Mode="Stable"
+export Auther=".geovpn"
+
+# // Root Checking
+if [ "${EUID}" -ne 0 ]; then
+		echo -e "${EROR} Please Run This Script As Root User !"
+		exit 1
+fi
+
+# // Exporting IP Address
+export IP=$( curl -s https://ipinfo.io/ip/ )
+
+clear
+echo "Checking VPS"
+# Getting
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                 ⇱ CREATE SSH ⇲            \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+read -p "Username : " Login
+read -p "Password : " Pass
+read -p "Expired (hari): " masaaktif
+read -p "   limit Quota :" Quota
+read -p "   input your limit ip :" limit
+echo "#! $Username $limit" >> /etc/limit/SSH/$Username
+
+domain=$(cat /etc/xray/domain)
+sldomain=$(cat /root/nsdomain)
+cdndomain=$(cat /root/awscdndomain)
+slkey=$(cat /etc/slowdns/server.pub)
+clear
+
+echo "Script AutoCreate Akun SSH dan OpenVPN By Aby&Fabumi"
+sleep 3
+echo Ping Host
+echo Cek Hak Akses...
+sleep 0.5
+echo Permission Accepted
+clear
+sleep 0.5
+echo Membuat Akun: $Login
+sleep 0.5
+echo Setting Password: $Pass
+sleep 0.5
+IP=$(wget -qO- ipinfo.io/ip);
+ws="$(cat ~/log-install.txt | grep -w "Websocket TLS" | cut -d: -f2|sed 's/ //g')"
+ws2="$(cat ~/log-install.txt | grep -w "Websocket None TLS" | cut -d: -f2|sed 's/ //g')"
+
+ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
+sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
+ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+clear
+systemctl stop client-sldns
+systemctl stop server-sldns
+pkill sldns-server
+pkill sldns-client
+systemctl enable client-sldns
+systemctl enable server-sldns
+systemctl start client-sldns
+systemctl start server-sldns
+systemctl restart client-sldns
+systemctl restart server-sldns
+
+systemctl restart ssh-ohp
+systemctl restart rc-local
+systemctl restart dropbear-ohp
+systemctl restart openvpn-ohp
+useradd -e `date -d "$masaaktif day" +"%H"` -s /bin/false -M $Login
+expi="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+hariini=`date -d "0 day" +"%T"`
+expi=`date -d "$masaaktif day" +"%T"`
+if [ -z ${Quota} ]; then
+  Quota="0"
+fi
+
+c=$(echo "${Quota}" | sed 's/[^0-9]*//g')
+d=$((${c} * 1024 * 1024 * 1024))
+
+if [[ ${c} != "0" ]]; then
+  echo "${d}" >/etc/SSH/${Username}
+fi
+clear
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                 ⇱ AKUN SSH ⇲            \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${LIGHT}Username: $Login"
+echo -e "Password: $Pass"
+echo -e "Created: $hariini"
+echo -e "Expired: $expi"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "IP/Host: $IP"
+echo -e "Domain SSH: $domain"
+echo -e "Domain Cloudflare: $domain"
+echo -e "PubKey : $slkey"
+echo -e "Nameserver: $sldomain"
+echo -e "$COLOR1 ${NC} limit quota : $Quota GB"
+echo -e "$COLOR1 ${NC} limit ip    : $limit IP"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "OpenSSH: 22"
+echo -e "Dropbear: 44, 69, 143"
+echo -e "STunnel4: 442,222,2096"
+echo -e "SlowDNS port: 53,5300,8080,443,80"
+echo -e "SSH Websocket SSL/TLS: 443"
+echo -e "SSH Websocket HTTP: 80,8080,8880"
+echo -e "SSH Websocket Direct: 8080"
+echo -e "OPEN VPN: 1194"
+echo -e "BadVPN UDPGW: 7100,7200,7300"
+echo -e "Proxy CloudFront: [OFF]"
+echo -e "Proxy Squid: [ON]"
+echo -e "OVPN TCP: http://$IP:81/tcp.ovpn"
+echo -e "OVPN UDP: http://$IP:81/udp.ovpn"
+echo -e "OVPN SSL: http://$IP:81/ssl.ovpn"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "SNI/Server Spoof: isi dengan bug"
+echo -e "Payload Websocket SSL/TLS"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "GET wss://bug.com/ HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "Payload Websocket HTTP"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "GET / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${CYAN}     Terimakasih sudah menggunakan" 
+echo -e "${CYAN}        script premium Aby&Fabumi"
+echo -e "${LIGHT}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
