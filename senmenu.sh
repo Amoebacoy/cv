@@ -59,7 +59,7 @@ wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Amoebacoy/cv/
 #wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-bckp-telegram.sh"
 wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu-bckp-github.sh"
 #wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/bckpbot.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/usernew.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/usernew"
 #wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/menu.sh"
 wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/webmin.sh"
 wget -q -O /usr/bin/changer "https://raw.githubusercontent.com/Amoebacoy/cv/main/senmenu/changer.sh"
