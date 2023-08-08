@@ -91,7 +91,7 @@ case $bro in
 02 | 2) clear ; genssl ;;
 03 | 3) clear ; fix ;;
 04 | 4) clear ; bash thema.sh ;;
-05 | 5) clear ; speedtest ;;
+05 | 5) clear ; cek-speed ;;
 06 | 6) clear ; killall /bin/bash /usr/bin/menu ;;
 07 | 7) clear ; clearlog ;;
 08 | 8) clear ;  reboot ;;
