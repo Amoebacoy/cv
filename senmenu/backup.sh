@@ -31,7 +31,7 @@ echo "Selesai"
 
 
 
-curl -X POST https://api.telegram.org/bot5997650654:AAE5uE6AwkuTkWvFf5HXvjZoX_uXgEo5cPM/sendDocument \
+curl -X POST https://api.telegram.org/bot6608829596:AAE946U43ef2GeJ1dD90TZjpTNfbo-n3Mb0/sendDocument \
      -F "chat_id=$(cat /root/id)" \
      -F "document=@/root/backup.zip" \
      -F "caption=File backup mu" &> /dev/null
