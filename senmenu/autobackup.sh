@@ -65,6 +65,7 @@ echo "$tel" >> /root/id
 
 
 clear
+figlet "autobackup" | lolcat
 echo -e "=============================="
 echo -e "     Autobackup Data $sts     "
 echo -e "=============================="
