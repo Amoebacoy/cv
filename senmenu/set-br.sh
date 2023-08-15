@@ -19,7 +19,7 @@ clear
 sudo apt install ruby -y
 sleep 3
 clear
-sudo gem install lolcat -y
+sudo gem install lolcat
 sleep 3
 clear
 apt install msmtp-mta ca-certificates bsd-mailx -y
