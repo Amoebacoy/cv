@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 install unzip -y
 # Getting
 clear
-figlet "Backup"
+figlet "Backup" | lolcat
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
 rm -rf /root/backup
 mkdir /root/backup
