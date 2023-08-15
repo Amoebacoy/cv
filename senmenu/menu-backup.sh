@@ -38,6 +38,7 @@ read -p    "Pilih Nomor └╼>>>" bro
 if [ $bro = 1 ] || [ $bro = 1 ]
 then
 figlet "backup" | lolcat
+sleep 1
 mbackup
 echo "--------------------------------------------------------"
 echo
@@ -49,6 +50,7 @@ fi
 if [ $bro = 2 ] || [ $bro = 2 ]
 then
 figlet "Restore" | lolcat
+sleep 1
 mrestore
 echo "--------------------------------------------------------"
 echo
@@ -59,6 +61,7 @@ fi
 if [ $bro = 3 ] || [ $bro = 3 ]
 then
 figlet "strt" | lolcat
+sleep 1
 mstrt
 echo "--------------------------------------------------------"
 echo
@@ -69,6 +72,7 @@ fi
 if [ $bro = 4 ] || [ $bro = 4 ]
 then
 figlet "limitspeed" | lolcat
+sleep 1
 mlimitspeed
 echo "--------------------------------------------------------"
 echo
@@ -80,6 +84,7 @@ fi
 if [ $bro = 5 ] || [ $bro = 5 ]
 then
 figlet "autobackup" | lolcat
+sleep 1
 mautobackup
 echo "--------------------------------------------------------"
 echo
