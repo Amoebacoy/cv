@@ -18,7 +18,7 @@ echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo -e
 echo -e "${BlueCyan}              Menu Backup                   "
 echo -e
-echo -e "            t.me/azigaming404"
+echo -e "            t.me/mbahgugel"
 echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo
 echo
@@ -42,7 +42,7 @@ sleep 1
 mbackup
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script CyberVPN"
+echo "Terimakasih sudah menggunakan layanan script Kami"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -54,7 +54,7 @@ sleep 1
 mrestore
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script CyberVPN"
+echo "Terimakasih sudah menggunakan layanan script Kami"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -65,7 +65,7 @@ sleep 1
 mstrt
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script CyberVPN"
+echo "Terimakasih sudah menggunakan layanan script Kami"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -76,7 +76,7 @@ sleep 1
 mlimitspeed
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script CyberVPN"
+echo "Terimakasih sudah menggunakan layanan script Kami"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -88,7 +88,7 @@ sleep 1
 mautobackup
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script CyberVPN"
+echo "Terimakasih sudah menggunakan layanan script Kami"
 echo
 echo "--------------------------------------------------------"
 fi
