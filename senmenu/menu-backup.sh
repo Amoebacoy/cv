@@ -68,6 +68,7 @@ echo "--------------------------------------------------------"
 fi
 if [ $bro = 4 ] || [ $bro = 4 ]
 then
+figlet "limitspeed" | lolcat
 mlimitspeed
 echo "--------------------------------------------------------"
 echo
@@ -78,6 +79,7 @@ fi
 
 if [ $bro = 5 ] || [ $bro = 5 ]
 then
+figlet "autobackup" | lolcat
 mautobackup
 echo "--------------------------------------------------------"
 echo
