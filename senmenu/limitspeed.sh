@@ -57,6 +57,7 @@ else
 sts="${Error}"
 fi
 clear
+figlet "limitspeed" | lolcat
 echo -e "=================================="
 echo -e "    Limit Bandwidth Speed $sts    "
 echo -e "=================================="
