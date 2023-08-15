@@ -13,6 +13,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
+sudo apt-get install figlet -y
 sudo apt install ruby -y
 gem install lolcat -y
 apt install msmtp-mta ca-certificates bsd-mailx -y
