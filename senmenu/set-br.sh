@@ -14,16 +14,16 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 sudo apt-get install figlet -y
-sleep 1
+sleep 3
 clear
 sudo apt install ruby -y
-sleep 1
+sleep 3
 clear
 sudo gem install lolcat -y
-sleep 1
+sleep 3
 clear
 apt install msmtp-mta ca-certificates bsd-mailx -y
-sleep 1
+sleep 3
 clear
 read -rp "input your chat id Telegram:" nenen
 echo "$nenen" >> /root/id
