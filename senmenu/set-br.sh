@@ -9,7 +9,24 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+# // Export Banner Status Information
+export EROR="[${RED} EROR ${NC}]"
+export INFO="[${YELLOW} INFO ${NC}]"
+export OKEY="[${GREEN} OKEY ${NC}]"
+export PENDING="[${YELLOW} PENDING ${NC}]"
+export SEND="[${YELLOW} SEND ${NC}]"
+export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
 # ==========================================
+export SC=$( /usr/bin/mbackup )
+if [ "${SC}" -ne 1 ]; then
+echo -e "${INFO} Starting Replacing Script !"
+rm -rf /usr/bin/mbackup
+rm -rf /usr/bin/mautobackup
+rm -rf /usr/bin/mrestore
+rm -rf /usr/bin/mlimitspeed
+fi
+clear
+
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
@@ -38,4 +55,4 @@ chmod +x mbackup
 chmod +x mrestore
 chmod +x mlimitspeed
 cd
-rm -f /root/set-boba.sh
+rm -f /root/set-br.sh
